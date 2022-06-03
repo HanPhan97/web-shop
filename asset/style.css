@@ -1,0 +1,74 @@
+/* đặt file này dưới style để được ưu tiên*/
+/* PC Menu */
+@media (min-width: 1024px) {
+    .boxsp {
+        margin: 20px 20px;
+    }
+    
+    .about-title p{
+        font-size: 3rem;
+    }
+.about-item{
+    font-size: 1rem;
+}
+
+.col-left{
+    margin-left: 13rem;
+}
+.col-right{
+    margin-right: 13rem;
+}
+.adver{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+}
+
+/* Tablet Menu */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+    .about-title p{
+        font-size: 2rem;
+    }
+    .about-item{
+        font-size: 1rem;
+    }    
+    .adver{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+/* Mobile Menu  */
+@media (max-width: 740px) {
+    .s-mt-8{
+        margin-top: 8px !important;
+    }
+    .s-full-width,
+    .s-col-full{
+        width: 100%;
+    }
+   
+    .about-title p{
+        font-size: 1rem;
+    }
+    .about-item{
+        font-size: .5rem;
+    }
+    
+    #content .member-img{
+        width: 60%;
+    }
+    .contact-form .form-control{
+        width: auto;
+    }
+    
+    .adver{
+        margin-left: .5rem;
+        margin-right:.5rem;
+    }
+   
+}
+
+

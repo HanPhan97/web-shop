@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./asset/fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./asset/style1.css">
+    <link rel="stylesheet" href="./asset/style3.css">
+
+    <title>AliZée | View Cart</title>
+</head>
+<body>
+    
+    <!--  Header -->
+    <section id="header">
+            <div class="header container">
+                <div class="nav-bar">
+                    <div class="brand">
+                        <a href="./index.html" class="" style="text-decoration: none"> <!-- xoa gach chan-->
+                            <h1><span>A</span>li<span>Z</span>ée</h1>
+                        </a>
+                    </div>
+
+                    <div class="nav-list">
+                        <a href="./index.html" id="hambur" class="hambur "> <!-- Nut menu-->
+                            <i class="fa fa-home"></i> <!-- aria-hidden="true" để cải thiện khả năng truy cập web , chúng tôi khuyên bạn nên sử dụng aria-hidden = "true" để ẩn các biểu tượng được sử dụng hoàn toàn để trang trí.-->
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section><!--End Header-->
+
+
+    <section id="total">
+        <div class="row mb ">
+            <div class="boxtrai mr">
+                <div class="row">
+                    <h1>Đặt hàng thành công, <br>kiểm tra email để theo dõi đơn hàng của bạn! </h1>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <h1>THÔNG TIN NHẬN HÀNG</h1>
+                    <table class="thongtinnhanhang">
+                        <tbody id="thongtinnhanhang">
+                            <tr>
+                                <td width="20%">Họ tên</td>
+                                <td><input type="text" name="hoten"></td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ</td>
+                                <td><input type="text" name="diachi"></td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại</td>
+                                <td><input type="text" name="dienthoai"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td><input type="text" name="email"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row mb">
+                    <h1>GIỎ HÀNG</h1>
+                    <table>
+                        <tr>
+                            <th>STT</th>
+                            <th>Hình</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền ($)</th>
+                        </tr>
+                        <tbody id="mycart"></tbody>
+                    </table>
+                </div>
+                <div class="row mb">
+                    <a href="./index.html" style="text-decoration: none;color:brown;font-size: 1.5rem; " >Tiếp tục mua hàng &rAarr;</a>
+                </div>
+            </div>
+    </section>
+
+    <section id="footer">
+    <div class="footer-container">
+        <div class="brand"><h1><span>A</span>li<span>Z</span>ée</h1></div>
+        <h3>Social media</h3>
+        <div class="social-media">
+            <div class="social-icon">
+                <a class="social-item" href="#"><img src="https://img.icons8.com/bubbles/50/000000/facebook-new.png"/></a>
+                <a class="social-item" href="#"><img src="https://img.icons8.com/bubbles/50/000000/instagram-new--v2.png"/></a>
+                <a class="social-item" href="#"><img src="https://img.icons8.com/bubbles/50/000000/twitter-circled.png"/></a>    
+                 
+                <p>Copyright © 2022 Alizée™ ©. All rights reserved </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Footer-->
+<script src="./asset/script.js"> </script>
+    <script>
+        showgiohang_trangthanhtoan();
+        showthongtinnguoinhan();
+    </script>
+
+</body>
+</html>
+
+
+        <!--
+            <div class="boxphai">
+                <div class="row mb ">
+                    <div class="boxtitle">TÀI KHOẢN</div>
+                    <div class="boxcontent formtaikhoan">
+                        <form action="#" method="post">
+                            <div class="row mb10">
+                                Tên đăng nhập<br>
+                                <input type="text" name="user">
+                            </div>
+                            <div class="row mb10">
+                                Mật khẩu<br>
+
+                                <input type="password" name="pass">
+                            </div>
+                            <div class="row mb10">
+                                <input type="checkbox" name=""> Ghi nhớ tài khoản?</div>
+                            <div class="row mb10">
+                                <input type="submit" value="Đăng nhập">
+                            </div>
+                        </form>
+                        <li>
+                            <a href="#">Quên mật khẩu</a>
+                        </li>
+                        <li>
+                            <a href="#">Đăng ký thành viên</a>
+                        </li>
+                    </div>
+                </div>
+                <div class="row mb">
+                    <div class="boxtitle">DANH MỤC</div>
+                    <div class="boxcontent2 menudoc">
+                        <ul>
+                            <li>
+                                <a href="#">Đồng hồ</a>
+                            </li>
+                            <li>
+                                <a href="#">Laptop</a>
+                            </li>
+                            <li>
+                                <a href="#">Điện thoại</a>
+                            </li>
+                            <li>
+                                <a href="#">Ba lô</a>
+                            </li>
+                            <li>
+                                <a href="#">Đồng hồ</a>
+                            </li>
+                            <li>
+                                <a href="#">Laptop</a>
+                            </li>
+                            <li>
+                                <a href="#">Điện thoại</a>
+                            </li>
+                            <li>
+                                <a href="#">Ba lô</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="boxfooter searbox">
+                        <form action="#" method="post">
+                            <input type="text" name="" id="">
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="boxtitle">TOP 10 YÊU THÍCH</div>
+                    <div class="row boxcontent">
+                        <div class="row mb10 top10">
+                            <img src="images/1.jpg" alt="">
+                            <a href="#">Sir Rodney's Marmalade</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/5.jpg" alt="">
+                            <a href="#">Cate de Blaye</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/3.jpg" alt="">
+                            <a href="#">Tharinger Rostbratwurst</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/4.jpg" alt="">
+                            <a href="#">Mishi Kobe Niku</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/1.jpg" alt="">
+                            <a href="#">Sir Rodney's Marmalade</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/5.jpg" alt="">
+                            <a href="#">Cate de Blaye</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/3.jpg" alt="">
+                            <a href="#">Tharinger Rostbratwurst</a>
+                        </div>
+                        <div class="row mb10 top10">
+                            <img src="images/4.jpg" alt="">
+                            <a href="#">Mishi Kobe Niku</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->

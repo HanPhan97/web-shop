@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./asset/fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./asset/style1.css">
+    <link rel="stylesheet" href="./asset/style3.css">
+
+    <title>AliZée | View Cart</title>
+</head>
+<body>
+    
+    <!--  Header -->
+    <section id="header">
+            <div class="header container">
+                <div class="nav-bar">
+                    <div class="brand">
+                        <a href="./index.html" class="" style="text-decoration: none"> <!-- xoa gach chan-->
+                            <h1><span>A</span>li<span>Z</span>ée</h1>
+                        </a>
+                    </div>
+
+                    <div class="nav-list">
+                        <a href="./index.html" id="hambur" class="hambur "> <!-- Nut menu-->
+                            <i class="fa fa-home"></i> <!-- aria-hidden="true" để cải thiện khả năng truy cập web , chúng tôi khuyên bạn nên sử dụng aria-hidden = "true" để ẩn các biểu tượng được sử dụng hoàn toàn để trang trí.-->
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section><!--End Header-->
+
+
+    <section id="total">
+        <div class="row mb cart-info ">
+            <div class="boxtrai mr">
+                <div class="row">
+                    <h1>THÔNG TIN NHẬN HÀNG</h1>
+                    <table class="thongtinnhanhang">
+                        <tbody id="thongtinnhanhang">
+                            <tr>
+                                <td width="20%">Họ tên</td>
+                                <td><input type="text" name="hoten"></td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ</td>
+                                <td><input type="text" name="diachi"></td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại</td>
+                                <td><input type="text" name="dienthoai"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td><input type="text" name="email"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row mb">
+                    <h1>GIỎ HÀNG</h1>
+                    <table>
+                        <tr>
+                            <th>STT</th>
+                            <th>Hình</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Đơn giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền (VND)</th>
+                        </tr>
+                        <tbody id="mycart"></tbody>
+                    </table>
+                </div>
+                <div class="row mb">
+                    <button class="dongy" onclick="dongydatgang()">ĐỒNG Ý ĐẶT HÀNG</button>
+                </div>
+            </div>
+            
+        </div>
+        
+    
+        <script src="./asset/script.js"> </script>
+        <script>
+            showgiohang_trangthanhtoan();
+        </script>
+    </section>
+
+    <section id="footer">
+    <div class="footer-container">
+        <div class="brand"><h1><span>A</span>li<span>Z</span>ée</h1></div>
+        <h3>Social media</h3>
+        <div class="social-media">
+            <div class="social-icon">
+                <a class="social-item" href="#"><img src="https://img.icons8.com/bubbles/50/000000/facebook-new.png"/></a>
+                <a class="social-item" href="#"><img src="https://img.icons8.com/bubbles/50/000000/instagram-new--v2.png"/></a>
+                <a class="social-item" href="#"><img src="https://img.icons8.com/bubbles/50/000000/twitter-circled.png"/></a>    
+                 
+                <p>Copyright © 2022 Alizée™ ©. All rights reserved </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Footer-->
+
+</body>
+</html>

@@ -1,0 +1,848 @@
+/* Reset css*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{ /*khai báo một chủng font cho giao diện hợp lý hơn, ở đây là chủng font ko bị kéo chân*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.text-center{ /* 66 */
+    text-align: center !important;
+}
+.row {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+
+.row::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.col { /*59 Cột */
+float: left;
+padding-left: 18px;/* ảnh cách trái phải của địa điểm*/
+padding-right: 18px;
+}
+
+.col-full{
+    width: 100%;
+}
+.col-3 { /* 62 khai báo cho 3 cột*/
+    width: 33,33333%;
+}
+
+
+
+#header{
+    position: fixed;/* cho header dính vào top để khi kéo xuống header ko bị chạy mất, đặt lại các vị trí của headerr: trên, trái, phải= 0 */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    /* đặt chiều cao ( sâu) cho thanh header để khi ảnh slider nhận thuộc tính positon thì thanh header vẫn nằm đè lên trên ảnh slider 
+    ( không bị mất ưu tiên về vị trí khi đối mặt với thuộc tính position) */
+    z-index: 1;
+}
+
+/*Brand-title*/
+#header .nav-bar{ /* khoa nav lai vao ben phai*/
+    align-items: center;
+    float: right;
+}
+
+.nav-bar .brand h1{
+    position: fixed; /*co position: fixed thi moi chinh duoc top, left, rigt*/
+    top: 0;
+    left: 25px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: white;
+    
+}
+.brand h1 span{
+    color: crimson;
+}
+
+/*Giỏ hàng */
+.giohang {
+    position: fixed;
+    border-radius: 10px;
+    top: 3px;
+    height: 45px;
+    background: rgba(167, 14, 45, 0.801);
+    width: 57px;
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+.giohang:hover {
+    color: whitesmoke;
+    background: linear-gradient(rgb(182, 56, 56), rgb(156, 28, 54));
+}
+
+
+.giohang i {
+    width: 40px;
+    float: left;
+    margin-right: 5px;
+    transform: scale(1.5);
+    color: whitesmoke;
+    margin-left: 7px;
+    margin-top: 7px;
+
+}
+
+.giohang span {
+    font-weight: bold;
+    font-size: 2rem;
+    color: whitesmoke;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+
+    position:relative;
+    z-index: 3;
+    top: -38px;
+    left: 10px;
+}
+.showcart{
+    position: fixed;
+    border-radius: 10px;
+    top: 80px;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px #CCC solid;
+    z-index: 2;
+    right: 100% ;
+}
+#xoaall{
+    float: right;
+}
+
+#listCart{
+    color: #343f4f;
+    background-color: rgba(231, 213, 172, 0.9);
+    position: fixed;
+    z-index: 2;
+    top: 50px;
+    right: 20px;
+    width: 0px;
+    overflow-x: hidden;
+	transition: 0.5s;
+}
+#listCart .closeCart{
+    float: left;
+    padding: 4px;
+}
+#listCart table tr th{
+    padding: 10px;
+    font-family: Montserrat, sans-serif;
+
+}
+
+
+#listCart a{
+    border: 1px solid #343f4f;
+    text-decoration: none;
+    color: #343f4f;
+    text-transform: uppercase;
+    margin: 5px 5px;
+    background-color:rgba(231, 184, 131, 0.884);
+    font-family: Montserrat, sans-serif;
+    float: right;
+}
+#listCart a:hover{
+    color: white;
+    background-color: rgb(167, 14, 44);
+}
+
+/* */
+#total .h1{
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0px 20px 0px;
+
+}
+
+th {
+    background-color: rgba(231, 213, 172, 0.9);
+    padding: 10px;
+}
+
+th,
+td {
+    border: 1px #CCC solid;
+    text-align: center;
+}
+
+td div {
+    width: calc(100% - 20px);
+    padding: 0px 10px;
+    text-align: right;
+}
+
+th div {
+    width: calc(100% - 10px);
+    padding: 0px 5px;
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+td img {
+    width: 100px;
+}
+
+
+/*Menu*/
+
+.hambur{
+    height: 50px;
+    width: 50px;/*display: inline-block;*/
+    border: 3px solid  white; /* tao khung  vuong xung quanh*/
+    border-radius: 50%;  /*bo goc thanh hinh tron*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+    margin-right: 20px;
+    transform: scale(.8);
+
+}
+.hambur:hover{
+    opacity: 0.7;
+}
+.fa{
+    color: white;
+    position: relative;
+    transform: scale(1.5);
+}
+
+/*list menu*/
+#nav {
+    list-style-type: none;
+   /* có thể css vào thẻ ul hay li, ở đây là ul, kiểu phong cách của danh sách (list) là ko có, ban đầu mặc định có thể là chấm đầu dòng*/
+}
+#nav { /*li 3: khóa các mục (nav) trên header thành 1 hàng ngàng( code mặc định là dọc)*/
+    position: relative;
+    z-index: 2;
+    top: 50px;
+    /*display: block;*/
+    left: 100%; /*cách lề trái 100%  => ẩn menu*/
+    background-color: rgba(20, 20, 20, 0.644);
+}
+
+
+#nav li a{ /*5:sửa chữ màu trắng và bỏ gạch chân, căng giữa chữ ra thanh header,đặt khoảng cách giữa các menu*/
+    text-decoration: none; /*color: #fff;( chuyển color lên 12)*/
+    line-height: 46px;
+    padding: 5px 60px;
+    display: block; /* 8: tăng vùng quét khối(chọn) khi đặt chỏ vào menu,
+     giá trin inline-block là ăn theo kích thuowscncuar line-height: có height 46, width=khố chứa cả chữa;*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+
+
+}
+#nav>li>a{ /*12: vì thẻ (#nav li a) đã khai báo all con của nav dù là b1, b2,.. điều là chữ trắng nên ta phải khai báo riêng mục more để con của more có màu ko trùng nền, '>' : con trực tiếp mới bị ảnh hưởng*/
+    color: white;
+    background-color: rgba(127, 255, 212, 0);
+   text-transform: uppercase; /*15 chỉ thẻ a cấp 1 chỉnh sửa thành viết hoa*/
+}
+
+#nav> li:hover> a{ /* 7/13: hover vào li để thẻ con a được thừa hưởng,
+    chọn vào menu mà đổi màu thành xám chữ đen. bởi vì trong bài chỉ có 1 subnav nên chuyển thành gọi trực tiếp với '>',
+    nếu bài có nhiều nav phụ thì viết thẻ #nav>li:hover>a riêng với thẻ '#nav li:hover a' nếu lựa chọn di chuột đổi màu khác nhau */
+    color: crimson;
+    background-color: rgba(245, 245, 245, 0.85); /*giosng mauf header: rgba(20, 20, 20, 0.308)*/
+} 
+
+/*End Header*/
+
+/*Hero*/
+#hero{
+    
+    background-image: url(./img/bb.jpg) ;
+    background-size: cover ;
+    background-color: #343f4f;
+    color:white;
+    width: 100%;
+    height: 650px;
+    background-position: top center;
+    position: relative ;
+    z-index: -1;
+}
+.hero-container {
+    
+    color: rgba(245, 245, 245, 0.877);
+    top: 440px;
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;/* căng giữa cho hàng p*/
+    /*-webkit-text-stroke: 0.2vw rgba(0, 0, 0, 0.863); /* theem mau de vien chu*/
+}
+.hero-container p{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 300;
+    letter-spacing: .05rem;  
+    font-family: Ms Madi, sans-serif;
+}
+.hero-container p span {
+    font-family: 'Lucida Sans', Arial, sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;  
+}
+
+
+/*End Hero*/
+
+/*Store*/
+#store .store-container{
+ padding: 80px 80px;
+ margin: 0;
+ color: black;
+text-align: center;
+flex-direction: column;
+max-width: 1500px;
+font-family: Montserrat, sans-serif;
+
+
+}
+.store-top{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.store-top h1{
+    letter-spacing: .2rem;
+    width: 500px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    margin-bottom: 10px; /*  cách dưới margin= 0 0 10px*/
+    font-family: Montserrat, sans-serif;
+}
+.store-title {
+    margin-top: 30px;
+}
+.store-title p{
+    
+    color: #343f4f;
+    font-size: 1.4rem;
+    font-family: Montserrat, sans-serif;
+    margin-top: 10px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+.store-top h1 span{
+    color: rgb(167, 14, 44);
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    top: 10px;
+  }
+  /* Ẩn các slider */
+  .mySlides {
+      display: none;
+  }
+  /* Định dạng nội dung Caption */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* định dạng các chấm chuyển đổi các slide */
+  .dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  /* khi được hover, active đổi màu nền */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Thêm hiệu ứng khi chuyển đổi các slide */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+ 
+/*End Store*/
+
+/*About*/
+.about{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.about-container{
+    padding: 20px 20px;
+    color: black;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+    max-width: 1500px;
+    font-family: Montserrat, sans-serif;
+
+}
+
+.contact-container,
+.about-container{
+    background-color: rgba(167, 14, 45, 0.8);
+}
+
+.contact-top,
+.register-top,
+.about-top{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contact-top,
+.register-top h1,
+.about-top h1{
+    letter-spacing: .2rem;
+    width: 500px;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    margin-bottom: 10px; /* margin= 0 0 10px*/
+    font-family: Montserrat, sans-serif;
+
+}
+
+.contact-top span,
+/*.section-title span,*/
+.about-top h1 span,
+.about-title p span{
+    color: rgb(167, 14, 44)/*rgb(221, 143, 129)*/;
+}
+
+.about-title {
+    margin-top: 30px;
+}
+.about-title p{
+    color: rgba(221, 192, 129, .705);
+    font-family: Ms Madi, sans-serif;
+    margin-top: 10px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+.contact-form,
+.regis-form,
+.about-form{/* tao cot = flex box*/
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -1rem;
+    flex-flow: row wrap;
+}
+.contact-item,
+.regis-item,
+.about-item{   /* tao cot = flex box*/
+    border-radius: 20px; /* bo goc*/
+    flex: 1 0;
+    background-color: rgba(221, 192, 129, 0.705);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.regis-item h3,
+.about-item h3{
+    color: rgb(133, 42, 72);
+}
+
+.regis-item p,
+.about-item p{
+    margin-top: 15px;
+    color: #343f4f;
+}
+
+
+/*End About*/
+
+/*register*/
+.register-container{
+    padding: 80px 80px;
+    margin-bottom: 80px;
+    color: black;
+    text-align: center;
+    flex-direction: column;
+    max-width: 1500px;
+    font-family: Montserrat, sans-serif;
+
+}
+
+.register-top{/* css ở About*/}
+.register-top h1{/* css ở About*/}
+.register-top h1 span{/* css ở About*/}
+
+.advertiser-title .text1,
+.advertiser-title .text2,
+.register-title .text1,
+.register-title .text2{
+    font-size: 3rem;
+    font-family: Ms Madi, sans-serif;
+    margin-top: 0;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    color: rgb(214, 175, 90);
+
+}
+
+
+
+.register-title .text1 span,
+.register-title .text2 span,
+.register-top h1 span{
+    color: rgb(167, 14, 44);
+    
+}
+.register-title p{
+    color: black;
+}
+.register-title {
+    margin-top: 30px;
+}
+
+.register-container .text3{
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-family: Montserrat, sans-serif;
+    margin-top: 0;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+.regis-form{ /* css o about*/}
+.regis-item{/* css o about*/}
+.regis-item h3{}
+.regis-item p{}
+.regis-item i{
+    color: rgb(167, 14, 44);
+}
+
+
+#input-mail{
+    padding:  10px;
+    border-radius: 5px;
+
+}
+#send{
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: rgb(167, 14, 44);
+    color: white;
+}
+#send:hover{
+    opacity: 0.7;
+}
+
+/*Advertise*/
+
+.advertiser-title .text1 span,
+.advertiser-title .text2 span{
+    color: rgb(214, 75, 20);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.advertise{
+    margin-top: 60px;
+    max-height: 2400px;
+    padding-top: 30px;
+    text-align: center;
+    background-image: url(./img/background11.jpg);
+}
+.adver-items{
+    /* tao cot = flex boxrgba(167, 14, 45, 0.685)*/
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+}
+
+.adver{
+    width: auto;
+    height: 370px;
+    background-color:rgb(214, 175, 90) ;
+
+    border-radius: 20px; /* bo goc*/
+    flex: 1 0;
+    
+    margin-bottom:3rem;
+    margin-top:3rem;
+    padding: 2rem;
+}
+.adver .img{
+    min-height: 230px;
+    text-align: center;
+}
+.adver .img img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.adver a, .adver p{
+    text-decoration: none;
+    color: #915c55;
+       font-family: Montserrat, sans-serif;
+       font-weight: 600;
+       padding-top: 7px;
+       line-height: 1.6rem;
+}
+.adver input{
+    width: 40px;
+    right: 5px;
+    bottom: 43px;
+    border-radius: 5px;
+    border: 1px rgb(136, 64, 51) solid;
+}
+.adver button{
+    width:100px ;
+    /*position: ;
+    right: 5px;
+    bottom: 10px;*/
+    background-color: rgb(167, 14, 44);;
+    border-radius: 5px;
+    border: 1px rgb(136, 64, 51) solid;
+    padding: 5px 0px;
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+}
+.adver button:hover{
+    color: white;
+    opacity: 0.8;
+}
+
+
+/*End register*/
+
+/*Contact*/
+.contact-containe{
+        padding: 80px 80px;
+        margin: 0;
+        color: black;
+        text-align: center;
+        flex-direction: column;
+        max-width: 1500px;
+        font-family: Montserrat, sans-serif;
+}    
+
+.contact-containe h1{/* css ở About*/}
+
+.contact-form{
+    margin-top: 30px;
+}
+.contact-item{
+
+    margin-top: 15px;
+    color: #1d2430;
+}
+.contact-item img{
+}
+/*End Contact*/
+
+ 
+/* Store item: định dạng thẻ div chưa các button tab */
+div.item-container {
+    width: 95%;  
+    margin: 40px;      
+    
+}
+/* định dạng thẻ div chưa các button tab */
+div.tab {
+    margin-top: 40px;
+    overflow: hidden; 
+    border: 1px solid #ccc; 
+    background-color: rgba(221, 192, 129, 0.705); 
+}
+
+/* định dạng các button tab */
+div.tab button {
+    font-family: Montserrat, sans-serif;
+    color: #343f4f;
+    font-weight: 600;
+    background-color: rgba(231, 213, 172, 0.705); 
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* đổi màu khi một button tab được hover */
+div.tab button:hover {
+    background-color: rgb(167, 14, 44);
+}
+
+/* đổi màu nền cho tab đang được hiển thị nội dung */
+div.tab button.active {
+    background-color: rgba(167, 14, 45, 0.65);
+    color: white;
+}
+
+/* định dạng nội dung hiển thị */
+.tabcontent {
+    display: inline;
+    padding: 6px 6px;
+    border: 1px solid rgba(221, 192, 129, 0.705);
+    border-top: none;
+}
+
+/* css sản phẩm*/
+.mr {
+    margin-right: 2%;
+}
+.boxsp {
+    float: left;
+    width: calc(30% - 10px);
+    min-height: 320px;
+    border: 1px rgb(211, 174, 132) solid;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    background-color: rgba(221, 192, 129, 0.705);
+
+}
+
+.boxsp input {
+    width: 40px;
+    position: absolute;
+    right: 5px;
+    bottom: 43px;
+    border-radius: 5px;
+    border: 1px rgb(136, 64, 51) solid;
+}
+
+.boxsp button {
+    width: 80px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    background-color: rgb(167, 14, 44);;
+    border-radius: 5px;
+    border: 1px rgb(136, 64, 51) solid;
+    padding: 5px 0px;
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+}
+.boxsp button:hover{
+    color: white;
+    opacity: 0.8;
+}
+.boxsp .img {
+    min-height: 230px;
+    text-align: center;
+}
+
+.img img {
+    margin-top: 10px;
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+.boxsp a, .boxsp p{
+ text-decoration: none;
+ color: #343f4f;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    padding-top: 7px;
+    line-height: 1.6rem;
+}
+/*End store*/ 
+
+/*Footer*/
+
+.footer-container{
+    /*background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);*/
+    background-color: #343f4f;
+    padding: 30px 0;
+    margin-top: 80px;
+    color: whitesmoke;
+    text-align: center;
+    flex-direction: column;
+    max-width: 1500px;
+}
+.brand{
+    font-size: 1.5rem;
+ color: whitesmoke;
+}
+.brand span{
+    color: rgb(167, 14, 44);
+}
+
+h3{
+    margin-top: 10px;
+}
+.social-media{
+    margin-top: 10px;
+}
+.social-icon{
+    margin-top: 10px;
+}
+.social-icon .social-item:hover{
+    opacity: 0.7;
+}
+
+
+/*End Footer*/
+
+
+

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./asset/fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./asset/style1.css">
+    <link rel="stylesheet" href="./asset/style.css">
+    <link rel="stylesheet" href="">
+
+    <title>AliZée</title>
+</head>
+<body>
+    <!--  Header -->
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="./index.html" class="" style="text-decoration: none"> <!-- xoa gach chan-->
+                        <h1><span>A</span>li<span>Z</span>ée</h1>
+                    </a>
+                </div>
+
+                <!--
+                <div class="cart" style="left: 230px" >
+                    <a  id="cart-btn" onclick="openListCart()" >
+                        <i class="fa-solid fa-cart-shopping"></i><span id="countsp">0</span>
+                    </a>
+                </div>
+                    <div id="listCart">
+                        <a class="closeCart" onclick="closeCart()" > 
+                            <i class="fa fa-close"></i> <!-- aria-hidden="true" để cải thiện khả năng truy cập web , chúng tôi khuyên bạn nên sử dụng aria-hidden = "true" để ẩn các biểu tượng được sử dụng hoàn toàn để trang trí.
+                        </a>
+                        <table>
+                            <tr>
+                                <th>STT</th>
+                                <th>Hình</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền (VND)</th>
+                            </tr>
+                            <tbody id="mycart">
+                
+                            </tbody>
+                        </table>
+                        <br>
+                        <a  href="./total.html">Thanh Toán</a>
+
+                    </div>-->
+                <div class="giohang" style="right: 100px">
+                    <a onclick="showcart()"><i class="fa-solid fa-cart-shopping"></i><span id="countsp">0</span></a>
+                </div>    
+                <div id="showcart" class="showcart">
+                    
+                    <table>
+                            <tr>
+                                <th>STT</th>
+                                <th>Hình</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền ($)</th>
+                                <th>Xóa</th>
+                            </tr>
+                            <tbody id="mycart">
+                                <!--showmycart-->
+                            </tbody>
+                    </table>
+                    <br>
+                    <a href="total.html" style="text-decoration: none;color:brown;font-size: 1.3rem; ">Thanh Toán &rAarr;</a> 
+                    <button id="xoaall" onclick="xoatatca()" style="color:white;font-size: 1rem;background: brown; padding: 5px;cursor: pointer; ">Xóa hết</button>
+                </div>
+
+                <div class="nav-list">
+                    <a onclick="openMenu()" id="hambur" class="hambur "> <!-- Nut menu-->
+                        <i class="fa fa-bars"></i> <!-- aria-hidden="true" để cải thiện khả năng truy cập web , chúng tôi khuyên bạn nên sử dụng aria-hidden = "true" để ẩn các biểu tượng được sử dụng hoàn toàn để trang trí.-->
+                    </a>
+
+                    <ul id="nav">
+                        <li><a href="#store" data-after="">Giới Thiệu</a></li>
+                        <!--<li><a href="#about" data-after="">Chính sách</a></li>-->
+                        <li><a href="#register" data-after="">Đăng ký email </a></li>
+                        <li><a href="#items" data-after="">Sản Phẩm</a></li>
+                        <li><a href="./total.html" data-after="">Thanh Toán</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><!--End Header-->
+    <!--Hero Header Section-->
+    <section id="hero">
+        <div class="hero-container">
+            <p><span>Alizée jewelry </span><br>Tinh túy từ bạc</p> 
+            
+        </div>
+    </section><!--End Hero Header-->
+    <!--Store-->
+    <section id="store">
+      <div class="store-container">
+          <div class="store-top">
+              <h1>C<span>ử</span>a h<span>à</span>ng</h1>
+          </div>
+          <div class="store-title">
+            <p>Alizée chuyên cung cấp các sản phẩm trang sức bạc chất lượng với độ tinh khiết cao(99%) được nhập khẩu từ Ý. 
+                Chúng tôi cung cấp những sản phẩm đang dạng về mẫu mã, phong phú về kiểu dáng.<br> 
+                Alizée mang đến cho bạn những thiết kế mới nhất, sản phẩm phù hợp nhất 
+                và đúng gu nhất. </p>
+          </div>
+
+           <div class="slideshow-container">
+            <div class="mySlides fade">
+            <img src="./asset/img/strore slide/slide1.jpg" style="width:100%">
+            <div class="text">Nội dung caption của slide đầu tiên!</div>
+            </div>
+
+            <div class="mySlides fade">
+            <img src="./asset/img/strore slide/slide2.jpg" style="width:100%">
+            <div class="text">Nội dung caption của slide thứ 2!</div>
+            </div>
+
+            <div class="mySlides fade">
+            <img src="./asset/img/strore slide/slide3.jpg" style="width:100%">
+            <div class="text">Nội dung caption của slide thứ 3!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./asset/img/strore slide/slide4.jpg" style="width:100%">
+                <div class="text">Nội dung caption của slide thứ 4!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./asset/img/strore slide/slide5.jpg" style="width:100%">
+                <div class="text">Nội dung caption của slide thứ 5!</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="./asset/img/strore slide/slide6.jpg" style="width:100%">
+                <div class="text">Nội dung caption của slide thứ 6!</div>
+            </div>
+           
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(0)"></span> 
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        <span class="dot" onclick="currentSlide(5)"></span> 
+      </div>  
+
+        <!--About Section-->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-title">
+                <p>Đặc quyền chỉ có tại <span>AliZée</span></p>
+            </div>
+
+            <div class="about-form">
+                <div class="about-item">
+                    <h3 class="">100% Bạc cao cấp</h3>
+                    <p>Sản phẩm có độ tinh khiết cao, được nhập từ Ý. Bảo hành trọn đời</p>
+                </div>
+
+                <div class="about-item">
+                    <h3 class="">Đội ngũ tư vấn</h3>
+                    <p>Chuyên viên chăm sóc, tư vấn tận tình sẽ giúp bạn giải đáp thật nhanh chóng những thắc mắc </p>
+                </div>
+
+                <div class="about-item">
+                    <h3 class="">Ưu đãi hấp dẫn</h3>
+                    <p>Nhiều chương trình khuyến mãi và quà tặng hấp dẫn sẽ luôn được cập nhập qua email</p>
+                </div>
+
+                <div class="about-item">
+                    <h3 class="">Miễn phí đổi trả</h3>
+                    <p>Đổi-trả trong vòng 7 ngày cho tất cả các sản phẩm có hóa đơn.<br>
+                       Đặc biệt thu mua sản phẩm cũ với giá lên đến 80%
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section><!--About Section-->         
+          
+         
+    </section> <!--End Store-->
+
+    <!--About Section
+    <section id="about">
+        <div class="about-container">
+<!--
+            <div class="about-top">
+                <h1>Ch<span>í</span>nh s<span>á</span>ch</h1>
+            </div>  
+            <div class="about-title">
+                <p>Đặc quyền chỉ có tại <span>AliZée</span></p>
+            </div>
+
+            <div class="about-form">
+                <div class="about-item">
+                    <h3 class="">100% Bạc cao cấp</h3>
+                    <p>Sản phẩm có độ tinh khiết cao, được nhập từ Ý. Bảo hành trọn đời</p>
+                </div>
+
+                <div class="about-item">
+                    <h3 class="">Đội ngũ tư vấn</h3>
+                    <p>Chuyên viên chăm sóc, tư vấn tận tình sẽ giúp bạn giải đáp thật nhanh chóng những thắc mắc </p>
+                </div>
+
+                <div class="about-item">
+                    <h3 class="">Ưu đãi hấp dẫn</h3>
+                    <p>Nhiều chương trình khuyến mãi và quà tặng hấp dẫn sẽ luôn được cập nhập qua email</p>
+                </div>
+
+                <div class="about-item">
+                    <h3 class="">Miễn phí đổi trả</h3>
+                    <p>Đổi-trả trong vòng 7 ngày cho tất cả các sản phẩm có hóa đơn.<br>
+                       Đặc biệt thu mua sản phẩm cũ với giá lên đến 80%
+                    </p>
+                </div>
+            </div>
+            
+        </div>-->
+    </section><!--About Section-->
+    <!--Register Section-->
+    <section class="register">
+        <div class="register-container">
+            <div class="register-top">
+                <h1>Đ<span>ă</span>ng <span>ký</span> em<span>a</span>il</h1>
+            </div>
+            <div class="register-title">
+                <p class="text1">Trở thành <span>Alizée`s fan</span></p>
+                <p class="text2">Nhận ngay <span>ưu đãi độc quyền!</span></p>
+            </div>
+
+            <div class="regis-form">
+                <div class="regis-item">
+                    <h3 class="">Bước 1</h3>
+                    <i class="fa-solid fa-star"></i>
+                    <p>đăng ký chương trình thành viên thân thiết<br>Nhận ngay <span>200 điểm</span></p>
+                </div>
+
+                <div class="regis-item">
+                    <h3 class="">Bước 2</h3>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Mua hàng tích lũy điểm thưởng<br><span>1000Đ = 1 điểm</span></p>
+
+                </div>
+
+                <div class="regis-item">
+                    <h3 class="">Bước 3</h3>
+                    <i class="fa-solid fa-gift"></i>
+                    <p>Đổi điểm tích lũy<br>Nhận <span>quà miễn phí</span></p>
+                </div>
+            </div>
+
+            <div class="register-mail">
+                <input type="text" id="input-mail" name="email" placeholder="Nhập vào email của bạn!">
+                <span id="error"></span>
+                <span id="yes"></span>
+                <input type="submit" id="send" onclick="regis()" value="đăng ký ngay!"> 
+            </div>
+            <!--<i class="fa-solid fa-angle-right"></i>-->
+
+            <!--Quảng cáo-->
+            <section id="advertise">
+                <div class="advertise">
+                    <div class="advertiser-title">
+                        <p class="text1" style="font-size: 5rem;">Đã giảm <span> Thêm 10%</span></p>
+                        <p class="text2" style="font-size: 5rem;">Lại giảm <span>Khi mua trọn bộ!</span></p>
+                    </div>
+                    <div class="adver-items">
+                        <div class="col-left">
+                            <div class="adver">
+    
+                            <div class="" style="text-decoration-line:line-through"><img src="./asset/img/bst2.jpg" alt=""><br>420000 VND</div>
+                                <p><span style="color: brown;">380000</span> VND</p>
+                                <a href="#">BST01</a>
+                                <input type="number" name="soluong" min="1" max="10" value="1"><br>
+                                <button onclick="themvaogiohang(this)">&rAarr; Mua ngay</button>
+                            </div>
+                            <div class="adver">
+                                <div class="" style="text-decoration-line:line-through"><img src="./asset/img/bst3.jpg" alt=""><br>420000 VND</div>
+                                <p><span style="color: brown;">380000</span> VND</p>
+                                <a href="#">BST02</a>
+                                <input type="number" name="soluong" min="1" max="10" value="1"><br>
+                                <button onclick="themvaogiohang(this)">&rAarr; Mua ngay</button>
+                            </div>
+                            <div class="adver">
+                                <div class="" style="text-decoration-line:line-through"><img src="./asset/img/bst4.jpg" alt=""><br>390000 VND</div>
+                                <p><span style="color: brown;">350000</span> VND</p>
+                                <a href="#">BST02</a>
+                                <input type="number" name="soluong" min="1" max="10" value="1"><br>
+                                <button onclick="themvaogiohang(this)">&rAarr; Mua ngay</button>
+                            </div>
+                        </div>
+                        
+                        <div class="col-right">
+                            <div class="adver">
+                                <div class="" style="text-decoration-line:line-through"><img src="./asset/img/bst5.jpg" alt=""><br>450000 VND</div>
+                                <p><span style="color: brown;">400000</span> VND</p>
+                                <a href="#">BST02</a>
+                                <input type="number" name="soluong" min="1" max="10" value="1"><br>
+                                <button onclick="themvaogiohang(this)">&rAarr; Mua ngay</button>
+                            </div>
+                            <div class="adver">
+                                <div class="" style="text-decoration-line:line-through"><img src="./asset/img/bst6.jpg" alt=""><br>330000 VND</div>
+                                <p><span style="color: brown;">300000</span> VND</p>
+                                <a href="#">BST02</a>
+                                <input type="number" name="soluong" min="1" max="10" value="1"><br>
+                                <button onclick="themvaogiohang(this)">&rAarr; Mua ngay</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </section>
+            
+        </div>
+    </section><!--Register Section-->
+    <!--Contact Section
+    <section id="contact">
+        <div class="contact-container">
+            <div><h1 class="contact-top">Th<span>ô</span>ng T<span>i</span>n</h1></div>
+            
+            <div class="contact-form">
+                <div class="contact-item">
+                    <img src="https://img.icons8.com/bubbles/100/000000/phone.png">
+                    <div class="contact-info">
+                        <p>+08 000 000 000</p>
+                        <p>+08 111 111 111</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <img src="https://img.icons8.com/bubbles/100/000000/new-post.png">
+                    <div class="contact-info">
+                        <p>Email: alizee@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <img src="https://img.icons8.com/bubbles/100/000000/map-marker.png">
+                    <div class="contact-info">
+                        <p>Địa chỉ: 123, đường ABC, phường XYZ, quận 3, Hồ Chí Minh, Việt Nam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--End Contact-->
+
+    
+            
+    <!-- Sản phẩm-->
+    <section id="items">
+        <div class="item-container"> 
+            <div class="tab">
+                <button class="tablinks active">Hoa Tai</button>
+                <button class="tablinks">Vòng Cổ</button>
+                <button class="tablinks">Vòng tay</button>
+                <button class="tablinks">Nhẫn</button>
+            </div>
+            
+            <div id="EARD" class="tabcontent row">
+                
+                <div class="boxsp mr col col-3 s-col-full text-center ">
+                    <div class="row img"><img src="./asset/img/HoaTai/khuyen-tai-1.jpg" alt=""></div>
+                    <p><span>150000</span> VND</p>
+                    <a href="#">Hoa tai EO1</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/Khuyen-tai-bac-2.jpg" alt=""></div>
+                    <p><span>135000</span> VND</p>
+                    <a href="#">Hoa tai EO2</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/kieu-khuyen-tai-tron.jpg" alt=""></div>
+                    <p><span>115000</span> VND</p>
+                    <a href="#">Hoa tai EO3</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/khuyen-tai-dai.jpg" alt=""></div>
+                    <p><span>150000</span> VND</p>
+                    <a href="#">Hoa tai EO4</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/khuyen-tai-5.jpg" alt=""></div>
+                    <p><span>155000</span> VND</p>
+                    <a href="#">Hoa tai EO5</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/khuyen-tai-6.jpg" alt=""></div>
+                    <p><span>150000</span> VND</p>
+                    <a href="#">Hoa tai EO6</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/khuyen-tai-7.jpg" alt=""></div>
+                    <p><span>150000</span> VND</p>
+                    <a href="#">Hoa tai EO7</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/khuyen-tai-8.jpg" alt=""></div>
+                    <p><span>150000</span> VND</p>
+                    <a href="#">Hoa tai EO8</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/khuyen-tai-9.jpg" alt=""></div>
+                    <p><span>150000</span> VND</p>
+                    <a href="#">Hoa tai EO9</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/khuyen-tai-10.jpg" alt=""></div>
+                    <p><span>150000</span> VND</p>
+                    <a href="#">Hoa tai EO10</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/HoaTai/khuyen-tai4.jpg" alt=""></div>
+                    <p><span>150000</span> VND</p>
+                    <a href="#">Hoa tai E11</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                
+            </div>
+            
+            <div id="Vòng Cổ" class="tabcontent row">
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-1.jpg" alt=""></div>
+                    <p><span>210000</span> VND</p>
+                    <a href="#">Vòng cổ N01</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-2.jpg" alt=""></div>
+                    <p><span>215000</span> VND</p>
+                    <a href="#">Vòng cổ N02</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-3.jpg" alt=""></div>
+                    <p><span>220000</span> VND</p>
+                    <a href="#">Vòng cổ N03</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-4.jpg" alt=""></div>
+                    <p><span>180000</span> VND</p>
+                    <a href="#">Vòng cổ N04</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-5.jpg" alt=""></div>
+                    <p><span>210000</span> VND</p>
+                    <a href="#">Vòng cổ N05</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-6.jpg" alt=""></div>
+                    <p><span>195000</span> VND</p>
+                    <a href="#">Vòng cổ N06</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-7.jpg" alt=""></div>
+                    <p><span>170000</span> VND</p>
+                    <a href="#">Vòng cổ N07</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-8.jpg" alt=""></div>
+                    <p><span>220000</span> VND</p>
+                    <a href="#">Vòng cổ N08</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-9.jpg" alt=""></div>
+                    <p><span>220000</span> VND</p>
+                    <a href="#">Vòng cổ N09</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-10.jpg" alt=""></div>
+                    <p><span>220000</span> VND</p>
+                    <a href="#">Vòng cổ N10</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-11.jpg" alt=""></div>
+                    <p><span>220000</span> VND</p>
+                    <a href="#">Vòng cổ N11</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-12.jpg" alt=""></div>
+                    <p><span>220000</span> VND</p>
+                    <a href="#">Vòng cổ N12</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongCo/vong-co-13.jpg" alt=""></div>
+                    <p><span>220000</span> VND</p>
+                    <a href="#">Vòng cổ N13</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+            
+            <div id="Vòng tay" class="tabcontent row">
+                
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-1.jpg" alt=""></div>
+                    <p><span>130000</span> VNĐ</p>
+                    <a href="#">Vòng tay B01</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-2.jpg" alt=""></div>
+                    <p><span>165000</span> VNĐ</p>
+                    <a href="#">Vòng tay B02</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-3.jpg" alt=""></div>
+                    <p><span>145000</span> VNĐ</p>
+                    <a href="#">Vòng tay B03</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-4.jpg" alt=""></div>
+                    <p><span>175000</span> VNĐ</p>
+                    <a href="#">Vòng tay B04</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-5.jpg" alt=""></div>
+                    <p><span>180000</span> VNĐ</p>
+                    <a href="#">Vòng tay B05</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-6.jpg" alt=""></div>
+                    <p><span>145000</span> VNĐ</p>
+                    <a href="#">Vòng tay B06</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-7.jpg" alt=""></div>
+                    <p><span>155000</span> VNĐ</p>
+                    <a href="#">Vòng tay B07</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-8.jpg" alt=""></div>
+                    <p><span>180000</span> VNĐ</p>
+                    <a href="#">Vòng tay B08</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-9.jpg" alt=""></div>
+                    <p><span>165000</span> VNĐ</p>
+                    <a href="#">Vòng tay B09</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-10.jpg" alt=""></div>
+                    <p><span>165000</span> VNĐ</p>
+                    <a href="#">Vòng tay B10</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-9.jpg" alt=""></div>
+                    <p><span>165000</span> VNĐ</p>
+                    <a href="#">Vòng tay B09</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-11.jpg" alt=""></div>
+                    <p><span>165000</span> VNĐ</p>
+                    <a href="#">Vòng tay B11</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-12.jpg" alt=""></div>
+                    <p><span>165000</span> VNĐ</p>
+                    <a href="#">Vòng tay B12</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-13.jpg" alt=""></div>
+                    <p><span>165000</span> VNĐ</p>
+                    <a href="#">Vòng tay B13</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-14.jpg" alt=""></div>
+                    <p><span>165000</span> VNĐ</p>
+                    <a href="#">Vòng tay B14</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/VongTay/vong-tay-15.jpg" alt=""></div>
+                    <p><span>165000</span> VNĐ</p>
+                    <a href="#">Vòng tay B15</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+        
+                
+            </div>
+        
+            <div id="Nhẫn" class="tabcontent row">
+               
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-1.jpg" alt=""></div>
+                    <p><span>140000</span> VND</p>
+                    <a href="#">Nhẫn R01</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img "><img src="./asset/img/Nhan/nhan-2.jpg" alt=""></div>
+                    <p><span>120000</span> VND</p>
+                    <a href="#">Nhẫn R02</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-3.jpg" alt=""></div>
+                    <p><span>135000</span> VND</p>
+                    <a href="#">Nhẫn R03</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-4.jpg" alt=""></div>
+                    <p><span>115000</span> VND</p>
+                    <a href="#">Nhẫn R04</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-5.jpg" alt=""></div>
+                    <p><span>140000</span> VND</p>
+                    <a href="#">Nhẫn R05</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-6.jpg" alt=""></div>
+                    <p><span>180000</span> VND</p>
+                    <a href="#">Nhẫn R06</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-7.jpg" alt=""></div>
+                    <p><span>145000</span> VND</p>
+                    <a href="#">Nhẫn R07</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-8.jpg" alt=""></div>
+                    <p><span>135000</span> VND</p>
+                    <a href="#">Nhẫn R08</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-9.jpg" alt=""></div>
+                    <p><span>135000</span> VND</p>
+                    <a href="#">Nhẫn R09</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-10.jpg" alt=""></div>
+                    <p><span>135000</span> VND</p>
+                    <a href="#">Nhẫn R10</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-11.jpg" alt=""></div>
+                    <p><span>135000</span> VND</p>
+                    <a href="#">Nhẫn R11</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-12.jpg" alt=""></div>
+                    <p><span>135000</span> VND</p>
+                    <a href="#">Nhẫn R12</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-13.jpg" alt=""></div>
+                    <p><span>135000</span> VND</p>
+                    <a href="#">Nhẫn R13</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr col col-3 col-ful s-col-full text-center">
+                    <div class="row img"><img src="./asset/img/Nhan/nhan-14.jpg" alt=""></div>
+                    <p><span>135000</span> VND</p>
+                    <a href="#">Nhẫn R14</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+    
+    
+        </div>
+    </section>
+    <!--Footer-->
+    <section id="footer">
+        <div class="footer-container">
+            <div class="brand"><h1><span>A</span>li<span>Z</span>ée</h1></div>
+            <h3>Social media</h3>
+            <div class="social-media">
+                <div class="social-icon">
+                    <a class="social-item" href="#"><img src="https://img.icons8.com/bubbles/50/000000/facebook-new.png"/></a>
+                    <a class="social-item" href="#"><img src="https://img.icons8.com/bubbles/50/000000/instagram-new--v2.png"/></a>
+                    <a class="social-item" href="#"><img src="https://img.icons8.com/bubbles/50/000000/twitter-circled.png"/></a>    
+                     
+                    <p>Copyright © 2022 Alizée™ ©. All rights reserved </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Footer-->
+
+     
+
+    <script src="./asset/script.js"></script>
+</body>
+
+
+</html>
